@@ -11,3 +11,8 @@
 .logo-chip img{width:15px;height:15px;filter:drop-shadow(0 0 5px rgba(0,186,255,.45))}
 .logo-chip b{font:600 10px var(--mono);color:var(--cyan)}
 @media(max-width:650px){.timeline{margin-left:0}.timeline:before{left:76px}.timeline-marker{margin-left:0}}
+/* Additional viewport safety and the transparent professional portrait treatment. */
+img{max-width:100%}
+.hero-portrait img,.contact-photo img{object-fit:contain;object-position:center bottom;mix-blend-mode:normal;filter:contrast(1.08) saturate(.85) brightness(.82);mask-image:linear-gradient(to bottom,black 72%,transparent 100%)}
+@media(max-width:1100px) and (min-width:651px){.hero{grid-template-columns:minmax(0,1fr) 340px 70px;gap:20px}.hero-portrait{height:520px}.section-shell{padding-left:22px;padding-right:22px}.site-header{padding-left:22px;padding-right:22px}}
+@media(max-width:650px){.site-header,.section-shell,.footer{width:100%;max-width:100%;overflow:hidden}.hero-portrait img{padding:8px 28px 0}.contact-photo img{padding:0 25px}}
