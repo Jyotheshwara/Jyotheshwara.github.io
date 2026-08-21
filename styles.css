@@ -16,3 +16,14 @@ img{max-width:100%}
 .hero-portrait img,.contact-photo img{object-fit:contain;object-position:center bottom;mix-blend-mode:normal;filter:contrast(1.08) saturate(.85) brightness(.82);mask-image:linear-gradient(to bottom,black 72%,transparent 100%)}
 @media(max-width:1100px) and (min-width:651px){.hero{grid-template-columns:minmax(0,1fr) 340px 70px;gap:20px}.hero-portrait{height:520px}.section-shell{padding-left:22px;padding-right:22px}.site-header{padding-left:22px;padding-right:22px}}
 @media(max-width:650px){.site-header,.section-shell,.footer{width:100%;max-width:100%;overflow:hidden}.hero-portrait img{padding:8px 28px 0}.contact-photo img{padding:0 25px}}
+/* Skills hierarchy and 100% zoom overflow fix. */
+.skills-grid{min-width:0;width:100%}
+.skills-grid .section-heading h2{font-size:clamp(38px,4.2vw,62px);line-height:.9}
+.skills-grid .section-heading h2 em{-webkit-text-stroke:.8px #deefff}
+.skill-list{min-width:0}
+.skill-list h3{font-size:clamp(30px,3vw,48px);line-height:.9;margin:12px 0 14px}
+.hero{width:100%;min-width:0;grid-template-columns:minmax(0,1fr) minmax(280px,420px) minmax(78px,100px)}
+.hero-copy,.hero-portrait,.hero-stat{min-width:0}
+.hero-stat{overflow:visible}
+.hero-stat small{white-space:normal;overflow-wrap:anywhere}
+@media(max-width:1100px) and (min-width:651px){.hero{grid-template-columns:minmax(0,1fr) minmax(250px,340px) 78px}}
